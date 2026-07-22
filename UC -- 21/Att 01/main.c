@@ -64,11 +64,21 @@ int main(){
 
 //Att04
 /*
-
 int main(){
+    int num1, num2, resultado;
     
+    printf("Informe um Numero: ");
+    scanf("%d", &num1);
+    
+    printf("Informe um Numero: ");
+    scanf("%d", &num2);
+
+    resultado = num1 > num2;
+    
+    printf("O maior Numero é: %d\n", resultado);
 }
 */
+
 
 //Att05
 /*
