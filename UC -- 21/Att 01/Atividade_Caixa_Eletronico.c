@@ -21,13 +21,22 @@ int main(){
                 printf("Informe o Valor a ser Depositado: \n");
                 scanf("%f", &depositar);
                 saldo += depositar;
+                printf("Saldo: %.2f\n", saldo);
             break;
 
             case 3:
                 printf("Informe o Valor a ser Sacado: \n");
                 scanf("%f", &sacar);
-                saldo -= sacar;
-                break; 
+                if (sacar <= saldo){
+                    saldo -= sacar;
+                    printf("Saldo: %.2f\n", saldo);
+                    break; 
+                }
+                else{
+                    printf("Saldo Invalido");
+                    printf("Saldo: %.2f\n", saldo);
+                    break;
+                }
             case 0:
                 printf("\nSAINDOOO!!!\n");
                 break;
