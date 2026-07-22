@@ -129,3 +129,52 @@ int main(){
     return 0;
 }
 */
+
+//Att09
+/*
+int main(){
+    int numero;
+
+    printf("Digite um numero: ");
+    scanf("%d", &numero);
+
+    if (numero < 0) {
+        printf("Numero Negativo\n");
+    }
+    else if(numero == 0) {
+        printf("Numero Neutro\n");
+    }
+    else {
+        printf("Numero Positivo\n");
+    }
+
+    return 0;
+}
+*/
+
+//Att10
+/*
+int main(){
+    float ValorCompra,ValorCompraFinal, taxa; int indicador;
+    
+    printf("Informe o Valor da Compra: ");
+    scanf("%f", &ValorCompra);
+    
+    printf("Informe se a compra é Internacional(0 -> Não | 1 -> Sim): ");
+    scanf("%d", &indicador);
+
+    if (indicador == 0) {
+        taxa = ValorCompra * 0.10;
+    }
+    else{
+        taxa = ValorCompra * 0.20;
+    }
+
+    ValorCompraFinal = ValorCompra + taxa;
+
+    printf("O valor Final da Compra é: %.2f \n", ValorCompraFinal);
+    
+    return 0;
+}
+*/
+
