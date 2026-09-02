@@ -20,17 +20,18 @@ class UsuarioDAO extends DAO
         return $stmt->fetchAll(DAO::FETCH_CLASS, "miniMVC\Model\UsuarioModel");
     }
 
-    public function insert(){
+    public function insert(UsuarioModel $model)
+    {
         $sql = "INSERT INTO usuario (nome,email,senha,tipo) VALUES (?,?,?,?)";
         $stmt = parent::$connection->prepare($sql);
-        $stmt->bindValue(1,%model->nome);
-        $stmt->bindValue(2,%model->email);
-        $stmt->bindValue(3,%model->senha);
-        $stmt->bindValue(4,%model->tipo);
+        $stmt->bindValue(1, $model->nome);
+        $stmt->bindValue(2, $model->email);
+        $stmt->bindValue(3, $model->senha);
+        $stmt->bindValue(4, $model->tipo);
         $stmt->execute();
 
-        $model->id_usuario = parent::connection->lastInsertId();
-        return $model
+        $model->id_usuario = parent::$connection->lastInsertId();
+        return $model;
     }
 }
 

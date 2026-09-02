@@ -23,8 +23,9 @@ class UsuarioModel
         
     }
 
-    public static function save()
+    public function save()
     {
-        
+        $objUser = new UsuarioDAO();
+        return $objUser->insert($this);
     }
 }

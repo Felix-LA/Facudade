@@ -1,22 +1,26 @@
 <?php
 
 use miniMVC\Controller\UsuarioController;
+use miniMVC\Controller\InicialController;
 
 $url = parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH);
-
-
 // echo $url;
 
 switch($url)
 {
-    case '/minimvc/':
+    case "/minimvc/":
         InicialController::index();
+    break;
+
     case '/minimvc/usuario':
-        // echo "CHAMAR A CLASSE DE USUARIO";
         UsuarioController::all();
     break;
 
-    case '/minimvc/veiculo':
-        echo "CHAMAR A CLASSE DE VEICULO";
+    case  '/minimvc/usuario/cadastro':
+        UsuarioController::cadastro();
+    break;
+
+    case  '/minimvc/admin':
+        UsuarioController::cadastro();
     break;
 }
